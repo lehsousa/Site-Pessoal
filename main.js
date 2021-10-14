@@ -10,7 +10,7 @@ const scrollReveal = ScrollReveal({
 scrollReveal.reveal(
     `
 .logo h1, .header-itens nav, .header-itens h1, .call , .about h1, .about-content img, .about-txt,
-.skills, .container, .frase, .social, .social p
+.skills,  .frase, .social, .social p
 
 `, {
         interval: 150

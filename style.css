@@ -20,7 +20,7 @@ html {
 }
 
 section {
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 ol,
@@ -48,7 +48,6 @@ a {
 .container {
     max-width: min(90vw, 1600px);
     margin: auto;
-    border: red 2px solid;
 }
 
 .title {
@@ -271,17 +270,13 @@ h1 {
     text-transform: uppercase;
     color: var(--title-color);
     border-bottom: 2px solid var(--title-color);
+    margin-bottom: 4rem;
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-}
-
-.about-content .image,
-.about-content .about-txt {
-    border: blue 2px solid;
 }
 
 .about-content .about-txt {
@@ -325,7 +320,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
 .skills h1 {
@@ -611,6 +605,12 @@ footer a {
 @media(max-width:635px) {
     .header-itens h1 {
         padding: 0 5rem;
+    }
+    .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
