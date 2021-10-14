@@ -48,6 +48,7 @@ a {
 .container {
     max-width: min(90vw, 1600px);
     margin: auto;
+    border: red 2px solid;
 }
 
 .title {
@@ -263,14 +264,7 @@ nav ul li a:hover:after {
     flex-direction: column;
 }
 
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
-.about-content h1 {
+h1 {
     font-family: var(--title-font);
     font-size: 2.5rem;
     font-weight: 100;
@@ -279,17 +273,32 @@ nav ul li a:hover:after {
     border-bottom: 2px solid var(--title-color);
 }
 
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about-content .image,
+.about-content .about-txt {
+    border: blue 2px solid;
+}
+
+.about-content .about-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .about-content .image img {
     width: 40vw;
     height: 100%;
-    margin-right: 2rem;
 }
 
 .about-content .about-txt p {
     font-family: var(--text-font);
     color: var(--text-color);
-    font-size: 1.3rem;
-    margin-left: 2rem;
     text-align: justify;
 }
 
@@ -331,7 +340,6 @@ nav ul li a:hover:after {
 
 .container-box {
     position: relative;
-    width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-gap: 10px 35px;
@@ -425,34 +433,6 @@ nav ul li a:hover:after {
     font-weight: 500;
     color: var(--text-color);
     position: relative;
-}
-
-.box .content a {
-    position: relative;
-    margin: 20px 0 0;
-    padding: 10px 20px;
-    font-family: var(--text-font);
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--title-color);
-    display: inline-block;
-    border: 1px solid var(--text-color);
-    transition: .5s;
-    transform: translateY(-40px);
-    opacity: 0;
-    visibility: hidden;
-}
-
-.box:hover .content a {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-}
-
-.box .content a:hover {
-    color: var(--hover-color);
-    background: var(--text-color);
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #da9, 0 0 82px #da9, 0 0 92px #da9, 0 0 102px #da9, 0 0 151px #da9;
 }
 
 
